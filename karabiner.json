@@ -379,6 +379,32 @@
                                     { "set_variable": { "name": "work_mode", "value": 0 } }
                                 ],
                                 "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "LinkedIn (work profile)",
+                                "from": { "key_code": "l", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://www.linkedin.com/'" },
+                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Cheat sheet: right_command+/ opens the shortcuts reference page",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "description": "Open shortcuts cheat sheet",
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [
+                                    { "shell_command": "open '/Users/bdelonglee/Documents/PROJECTS/DEV/karabiner/cheatsheet.html'" }
+                                ]
                             }
                         ]
                     }

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Karabiner Shortcuts</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --muted: #6e6e73;
+    --border: #e5e5ea;
+    --accent: #0071e3;
+    --key-bg: #eef2ff;
+    --key-border: #c7d2fe;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1e;
+      --card: #2c2c2e;
+      --text: #f2f2f7;
+      --muted: #9a9aa0;
+      --border: #3a3a3c;
+      --accent: #409cff;
+      --key-bg: #2a2f45;
+      --key-border: #4b5563;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.5rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 0.25rem; }
+  .subtitle { color: var(--muted); margin: 0 0 2rem; font-size: 0.95rem; }
+  .modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem 1.4rem;
+  }
+  .card h2 {
+    font-size: 1.05rem;
+    margin: 0 0 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .leader {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--key-bg);
+    border: 1px solid var(--key-border);
+    color: var(--accent);
+    padding: 0.15rem 0.55rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .card p.hint { color: var(--muted); font-size: 0.8rem; margin: 0 0 1rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  td { padding: 0.35rem 0; border-bottom: 1px dashed var(--border); }
+  td:last-child { border-bottom: none; }
+  tr:last-child td { border-bottom: none; }
+  .key {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-weight: 700;
+    width: 2.2rem;
+    color: var(--accent);
+  }
+  .app { color: var(--text); }
+  footer { margin-top: 2rem; color: var(--muted); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Karabiner Leader Shortcuts</h1>
+  <p class="subtitle">Hold right ⌘, tap the mode letter, release, then tap a mapped letter within 1.5s.</p>
+
+  <div class="modes">
+    <div class="card">
+      <h2><span class="leader">right⌘ + S</span> Software</h2>
+      <p class="hint">Creative apps</p>
+      <table>
+        <tr><td class="key">m</td><td class="app">Maya</td></tr>
+        <tr><td class="key">p</td><td class="app">Photoshop 2025</td></tr>
+        <tr><td class="key">d</td><td class="app">DaVinci Resolve</td></tr>
+        <tr><td class="key">c</td><td class="app">Clip Studio Paint</td></tr>
+        <tr><td class="key">h</td><td class="app">Houdini FX</td></tr>
+        <tr><td class="key">n</td><td class="app">NukeX</td></tr>
+        <tr><td class="key">b</td><td class="app">Blender</td></tr>
+        <tr><td class="key">f</td><td class="app">FileZilla</td></tr>
+        <tr><td class="key">k</td><td class="app">Karabiner-Elements</td></tr>
+        <tr><td class="key">l</td><td class="app">Lightroom Classic</td></tr>
+        <tr><td class="key">r</td><td class="app">RV</td></tr>
+        <tr><td class="key">s</td><td class="app">Spotify</td></tr>
+        <tr><td class="key">z</td><td class="app">Zed</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2><span class="leader">right⌘ + A</span> Lighter apps</h2>
+      <p class="hint">Everyday tools</p>
+      <table>
+        <tr><td class="key">c</td><td class="app">ChatGPT</td></tr>
+        <tr><td class="key">d</td><td class="app">Disk Expert</td></tr>
+        <tr><td class="key">e</td><td class="app">Google Earth Pro</td></tr>
+        <tr><td class="key">f</td><td class="app">FaceTime</td></tr>
+        <tr><td class="key">g</td><td class="app">Google Chrome</td></tr>
+        <tr><td class="key">m</td><td class="app">Messages</td></tr>
+        <tr><td class="key">p</td><td class="app">NordPass</td></tr>
+        <tr><td class="key">r</td><td class="app">PureRef</td></tr>
+        <tr><td class="key">s</td><td class="app">Spotify</td></tr>
+        <tr><td class="key">v</td><td class="app">NordVPN</td></tr>
+        <tr><td class="key">w</td><td class="app">WhatsApp</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2><span class="leader">right⌘ + W</span> Work</h2>
+      <p class="hint">macguff.eu Chrome profile</p>
+      <table>
+        <tr><td class="key">g</td><td class="app">Google Chrome (blank)</td></tr>
+        <tr><td class="key">m</td><td class="app">Gmail</td></tr>
+        <tr><td class="key">a</td><td class="app">Google Calendar</td></tr>
+        <tr><td class="key">n</td><td class="app">NoMachine</td></tr>
+        <tr><td class="key">t</td><td class="app">Todoist</td></tr>
+        <tr><td class="key">d</td><td class="app">Google Drive</td></tr>
+        <tr><td class="key">c</td><td class="app">Google Chat</td></tr>
+        <tr><td class="key">l</td><td class="app">LinkedIn</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2><span class="leader">right⌘ + /</span> This cheat sheet</h2>
+      <p class="hint">No follow-up letter needed &mdash; opens this page instantly</p>
+    </div>
+  </div>
+
+  <footer>Generated from ~/Documents/PROJECTS/DEV/karabiner/karabiner.json &mdash; edit karabiner.json and this file together.</footer>
+</div>
+</body>
+</html>

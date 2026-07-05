@@ -95,6 +95,13 @@ All Chrome actions open with `--profile-directory='Profile 4'`
 | t | Todoist |
 | d | Google Drive |
 | c | Google Chat |
+| l | LinkedIn |
+
+### `right⌘ + /` — Shortcuts cheat sheet
+
+Standalone combo (no follow-up letter needed): opens `cheatsheet.html` in
+the browser, a styled reference page mirroring the tables above. Keep it
+in sync whenever a mapping changes here.
 
 ## Adding more
 
