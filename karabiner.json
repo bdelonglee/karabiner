@@ -292,6 +292,26 @@
                                     { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
                                 ],
                                 "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Obsidian",
+                                "from": { "key_code": "o", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -a '/Applications/Obsidian.app'" },
+                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Zen Notes",
+                                "from": { "key_code": "z", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -a '/Applications/ZenNotes.app'" },
+                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
                             }
                         ]
                     },

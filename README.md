@@ -80,6 +80,8 @@ everyday left-⌘ shortcuts like Select All.
 | s | Spotify |
 | v | NordVPN |
 | w | WhatsApp |
+| o | Obsidian |
+| z | Zen Notes |
 
 ### `right⌘ + W` — Work (macguff.eu Chrome profile)
 
