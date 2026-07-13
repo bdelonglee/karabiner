@@ -99,6 +99,21 @@ All Chrome actions open with `--profile-directory='Profile 4'`
 | c | Google Chat |
 | l | LinkedIn |
 
+### `right⌘ + P` — Personal (bdelonglee@gmail.com Chrome profile)
+
+All Chrome actions open with `--profile-directory='Default'`
+(`bdelonglee@gmail.com`).
+
+| Key | Action |
+|-----|--------|
+| g | Google Chrome (blank window, personal profile) |
+| m | Gmail |
+| a | Google Calendar |
+| t | Todoist |
+| d | Google Drive |
+| c | Google Chat |
+| l | LinkedIn |
+
 ### `right⌘ + /` — Shortcuts cheat sheet
 
 Standalone combo (no follow-up letter needed): opens `cheatsheet.html` in
@@ -108,8 +123,8 @@ in sync whenever a mapping changes here.
 ## Adding more
 
 Each mode is a rule in `complex_modifications.rules`, keyed by a
-`set_variable` flag (`app_launcher_mode`, `lighter_apps_mode`, `work_mode`)
-that's armed by the leader manipulator and read by each letter's
+`set_variable` flag (`app_launcher_mode`, `lighter_apps_mode`, `work_mode`,
+`personal_mode`) that's armed by the leader manipulator and read by each letter's
 `variable_if` condition. To add a letter to an existing mode, copy one of
 its manipulators, change the `key_code` and the `shell_command`. To add a
 new mode, copy a whole rule block with a new leader key and variable name.

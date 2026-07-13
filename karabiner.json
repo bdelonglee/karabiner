@@ -413,6 +413,93 @@
                         ]
                     },
                     {
+                        "description": "App Launcher: right_command+P then a letter to launch a personal app (bdelonglee@gmail.com Chrome profile)",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "description": "Arm personal launcher mode",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [{ "set_variable": { "name": "personal_mode", "value": 1 } }],
+                                "to_delayed_action": {
+                                    "to_if_invoked": [{ "set_variable": { "name": "personal_mode", "value": 0 } }]
+                                }
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Google Chrome (personal profile)",
+                                "from": { "key_code": "g", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default'" },
+                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Gmail (personal profile)",
+                                "from": { "key_code": "m", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://mail.google.com/mail/u/0/'" },
+                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Google Calendar (personal profile)",
+                                "from": { "key_code": "a", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://calendar.google.com/calendar/u/0/r'" },
+                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Todoist (personal profile)",
+                                "from": { "key_code": "t", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://todoist.com/app/today'" },
+                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Google Drive (personal profile)",
+                                "from": { "key_code": "d", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://drive.google.com/drive/u/0/my-drive'" },
+                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Google Chat (personal profile)",
+                                "from": { "key_code": "c", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://chat.google.com/'" },
+                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "LinkedIn (personal profile)",
+                                "from": { "key_code": "l", "modifiers": { "optional": ["any"] } },
+                                "to": [
+                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://www.linkedin.com/'" },
+                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                ],
+                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                            }
+                        ]
+                    },
+                    {
                         "description": "Cheat sheet: right_command+/ opens the shortcuts reference page",
                         "manipulators": [
                             {
