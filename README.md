@@ -98,6 +98,7 @@ All Chrome actions open with `--profile-directory='Profile 4'`
 | d | Google Drive |
 | c | Google Chat |
 | l | LinkedIn |
+| i | Discord |
 
 ### `right⌘ + P` — Personal (bdelonglee@gmail.com Chrome profile)
 
