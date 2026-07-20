@@ -33,6 +33,31 @@ doesn't seem to apply, restart its core service:
 launchctl kickstart -k gui/$(id -u)/org.pqrs.service.agent.Karabiner-Core-Service-rev2
 ```
 
+### If a change "doesn't work" — check the symlink first
+
+Karabiner-Elements saves its own config via write-to-temp-then-rename, which
+replaces a symlink with a plain file instead of writing through it. This can
+happen on its own (e.g. it rewrites the profile when it notices a device
+change), silently breaking the link this setup depends on — after that,
+edits to the repo file stop reaching the app entirely, with no error.
+
+If a change isn't taking effect, check first:
+
+```sh
+ls -la ~/.config/karabiner/karabiner.json   # should show `-> <repo>/karabiner.json`
+```
+
+If it's a plain file instead of a symlink, recreate it (back up the plain
+file first in case it has newer device-specific settings worth diffing
+against, e.g. `devices` entries or `simple_modifications` added via the
+Karabiner GUI):
+
+```sh
+mv ~/.config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json.bak
+ln -s /path/to/this/repo/karabiner.json ~/.config/karabiner/karabiner.json
+launchctl kickstart -k gui/$(id -u)/org.pqrs.service.agent.Karabiner-Core-Service-rev2
+```
+
 ## Simple modifications
 
 - Caps Lock → Left Control
