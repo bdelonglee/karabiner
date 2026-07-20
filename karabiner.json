@@ -1,14 +1,24 @@
 {
-    "global": { "show_in_menu_bar": false },
+    "global": {
+        "show_in_menu_bar": false
+    },
     "profiles": [
         {
             "devices": [
                 {
-                    "identifiers": { "is_keyboard": true },
+                    "identifiers": {
+                        "is_keyboard": true
+                    },
                     "simple_modifications": [
                         {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "left_control" }]
+                            "from": {
+                                "key_code": "caps_lock"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_control"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -29,142 +39,420 @@
                                 "description": "Arm software launcher mode",
                                 "from": {
                                     "key_code": "s",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "set_variable": { "name": "app_launcher_mode", "value": 1 } }],
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "to_delayed_action": {
-                                    "to_if_invoked": [{ "set_variable": { "name": "app_launcher_mode", "value": 0 } }]
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "app_launcher_mode",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
                                 }
                             },
                             {
                                 "type": "basic",
                                 "description": "Maya",
-                                "from": { "key_code": "m", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Autodesk/maya2024/Maya.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Autodesk/maya2024/Maya.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Photoshop",
-                                "from": { "key_code": "p", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Adobe Photoshop 2025/Adobe Photoshop 2025.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Adobe Photoshop 2025/Adobe Photoshop 2025.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "DaVinci Resolve",
-                                "from": { "key_code": "d", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/DaVinci Resolve/DaVinci Resolve.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/DaVinci Resolve/DaVinci Resolve.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Clip Studio Paint",
-                                "from": { "key_code": "c", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/CLIP STUDIO 1.5/App/CLIP STUDIO PAINT.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/CLIP STUDIO 1.5/App/CLIP STUDIO PAINT.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Houdini FX",
-                                "from": { "key_code": "h", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Houdini/Houdini20.0.733/Houdini FX 20.0.733.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Houdini/Houdini20.0.733/Houdini FX 20.0.733.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "NukeX",
-                                "from": { "key_code": "n", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Nuke15.0v4/NukeX15.0v4.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Nuke15.0v4/NukeX15.0v4.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Blender",
-                                "from": { "key_code": "b", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Blender.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Blender.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "FileZilla",
-                                "from": { "key_code": "f", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/FileZilla.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/FileZilla.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Karabiner-Elements",
-                                "from": { "key_code": "k", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Karabiner-Elements.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Karabiner-Elements.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Lightroom Classic",
-                                "from": { "key_code": "l", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Adobe Lightroom Classic/Adobe Lightroom Classic.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Adobe Lightroom Classic/Adobe Lightroom Classic.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "RV",
-                                "from": { "key_code": "r", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/RV.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/RV.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Spotify",
-                                "from": { "key_code": "s", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Spotify.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Spotify.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Zed",
-                                "from": { "key_code": "z", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Zed.app'" },
-                                    { "set_variable": { "name": "app_launcher_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Zed.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "app_launcher_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "app_launcher_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "app_launcher_mode",
+                                        "value": 1
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -176,142 +464,420 @@
                                 "description": "Arm lighter apps launcher mode",
                                 "from": {
                                     "key_code": "a",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "set_variable": { "name": "lighter_apps_mode", "value": 1 } }],
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "to_delayed_action": {
-                                    "to_if_invoked": [{ "set_variable": { "name": "lighter_apps_mode", "value": 0 } }]
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "lighter_apps_mode",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
                                 }
                             },
                             {
                                 "type": "basic",
                                 "description": "ChatGPT",
-                                "from": { "key_code": "c", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/ChatGPT.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/ChatGPT.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Disk Expert",
-                                "from": { "key_code": "d", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Disk Expert 5.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Disk Expert 5.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Earth Pro",
-                                "from": { "key_code": "e", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Google Earth Pro.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Google Earth Pro.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "FaceTime",
-                                "from": { "key_code": "f", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/System/Applications/FaceTime.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/System/Applications/FaceTime.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Chrome",
-                                "from": { "key_code": "g", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Google Chrome.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Google Chrome.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Messages",
-                                "from": { "key_code": "m", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/System/Applications/Messages.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/System/Applications/Messages.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "NordPass",
-                                "from": { "key_code": "p", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/NordPass.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/NordPass.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "PureRef",
-                                "from": { "key_code": "r", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/PureRef.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/PureRef.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Spotify",
-                                "from": { "key_code": "s", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Spotify.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Spotify.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "NordVPN",
-                                "from": { "key_code": "v", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/NordVPN.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/NordVPN.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "WhatsApp",
-                                "from": { "key_code": "w", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/WhatsApp.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/WhatsApp.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Obsidian",
-                                "from": { "key_code": "o", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Obsidian.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Obsidian.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Zen Notes",
-                                "from": { "key_code": "z", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/ZenNotes.app'" },
-                                    { "set_variable": { "name": "lighter_apps_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/ZenNotes.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "lighter_apps_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "lighter_apps_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "lighter_apps_mode",
+                                        "value": 1
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -323,102 +889,300 @@
                                 "description": "Arm work launcher mode",
                                 "from": {
                                     "key_code": "w",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "set_variable": { "name": "work_mode", "value": 1 } }],
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "to_delayed_action": {
-                                    "to_if_invoked": [{ "set_variable": { "name": "work_mode", "value": 0 } }]
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "work_mode",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
                                 }
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Chrome (work profile)",
-                                "from": { "key_code": "g", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Gmail (work profile)",
-                                "from": { "key_code": "m", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://mail.google.com/mail/u/0/'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://mail.google.com/mail/u/0/'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Calendar (work profile)",
-                                "from": { "key_code": "a", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://calendar.google.com/calendar/u/0/r'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://calendar.google.com/calendar/u/0/r'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "NoMachine",
-                                "from": { "key_code": "n", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/NoMachine.app'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/NoMachine.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Todoist (work profile)",
-                                "from": { "key_code": "t", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://todoist.com/app/today'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://todoist.com/app/today'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Drive (work profile)",
-                                "from": { "key_code": "d", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://drive.google.com/drive/u/0/my-drive'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://drive.google.com/drive/u/0/my-drive'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Chat (work profile)",
-                                "from": { "key_code": "c", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://chat.google.com/'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://chat.google.com/'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "LinkedIn (work profile)",
-                                "from": { "key_code": "l", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://www.linkedin.com/'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Profile 4' 'https://www.linkedin.com/'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Discord",
-                                "from": { "key_code": "i", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -a '/Applications/Discord.app'" },
-                                    { "set_variable": { "name": "work_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -a '/Applications/Discord.app'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "work_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "work_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "work_mode",
+                                        "value": 1
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -430,97 +1194,364 @@
                                 "description": "Arm personal launcher mode",
                                 "from": {
                                     "key_code": "p",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "set_variable": { "name": "personal_mode", "value": 1 } }],
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "personal_mode",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "to_delayed_action": {
-                                    "to_if_invoked": [{ "set_variable": { "name": "personal_mode", "value": 0 } }]
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "personal_mode",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
                                 }
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Chrome (personal profile)",
-                                "from": { "key_code": "g", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default'" },
-                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "personal_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "personal_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Gmail (personal profile)",
-                                "from": { "key_code": "m", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://mail.google.com/mail/u/0/'" },
-                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://mail.google.com/mail/u/0/'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "personal_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "personal_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Calendar (personal profile)",
-                                "from": { "key_code": "a", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://calendar.google.com/calendar/u/0/r'" },
-                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://calendar.google.com/calendar/u/0/r'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "personal_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "personal_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Todoist (personal profile)",
-                                "from": { "key_code": "t", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://todoist.com/app/today'" },
-                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://todoist.com/app/today'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "personal_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "personal_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Drive (personal profile)",
-                                "from": { "key_code": "d", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://drive.google.com/drive/u/0/my-drive'" },
-                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://drive.google.com/drive/u/0/my-drive'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "personal_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "personal_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "Google Chat (personal profile)",
-                                "from": { "key_code": "c", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://chat.google.com/'" },
-                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://chat.google.com/'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "personal_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "personal_mode",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "type": "basic",
                                 "description": "LinkedIn (personal profile)",
-                                "from": { "key_code": "l", "modifiers": { "optional": ["any"] } },
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
                                 "to": [
-                                    { "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://www.linkedin.com/'" },
-                                    { "set_variable": { "name": "personal_mode", "value": 0 } }
+                                    {
+                                        "shell_command": "open -na 'Google Chrome' --args --profile-directory='Default' 'https://www.linkedin.com/'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "personal_mode",
+                                            "value": 0
+                                        }
+                                    }
                                 ],
-                                "conditions": [{ "type": "variable_if", "name": "personal_mode", "value": 1 }]
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "personal_mode",
+                                        "value": 1
+                                    }
+                                ]
                             }
                         ]
                     },
                     {
-                        "description": "Cheat sheet: right_command+/ opens the shortcuts reference page",
+                        "description": "Shortcuts mode: right_command+/ then a letter to open a cheat sheet page",
                         "manipulators": [
                             {
                                 "type": "basic",
-                                "description": "Open shortcuts cheat sheet",
+                                "description": "Arm shortcuts mode",
                                 "from": {
                                     "key_code": "slash",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
                                 },
                                 "to": [
-                                    { "shell_command": "open '/Users/bdelonglee/Documents/PROJECTS/DEV/karabiner/cheatsheet.html'" }
+                                    {
+                                        "set_variable": {
+                                            "name": "shortcuts_mode",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "shortcuts_mode",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Karabiner cheat sheet",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open '/Users/bdelonglee/.config/cheatsheet/karabiner.html'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "shortcuts_mode",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "shortcuts_mode",
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Tmux cheat sheet",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open '/Users/bdelonglee/.config/cheatsheet/tmux.html'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "shortcuts_mode",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "shortcuts_mode",
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "Aerospace cheat sheet",
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open '/Users/bdelonglee/.config/cheatsheet/aerospace.html'"
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "shortcuts_mode",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "shortcuts_mode",
+                                        "value": 1
+                                    }
                                 ]
                             }
                         ]
@@ -531,12 +1562,24 @@
             "selected": true,
             "simple_modifications": [
                 {
-                    "from": { "key_code": "caps_lock" },
-                    "to": [{ "key_code": "left_control" }]
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_control"
+                        }
+                    ]
                 },
                 {
-                    "from": { "key_code": "non_us_backslash" },
-                    "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                    "from": {
+                        "key_code": "non_us_backslash"
+                    },
+                    "to": [
+                        {
+                            "apple_vendor_top_case_key_code": "keyboard_fn"
+                        }
+                    ]
                 }
             ],
             "virtual_hid_keyboard": {

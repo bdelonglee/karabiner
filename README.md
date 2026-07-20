@@ -115,17 +115,27 @@ All Chrome actions open with `--profile-directory='Default'`
 | c | Google Chat |
 | l | LinkedIn |
 
-### `right⌘ + /` — Shortcuts cheat sheet
+### `right⌘ + /` — Shortcuts mode
 
-Standalone combo (no follow-up letter needed): opens `cheatsheet.html` in
-the browser, a styled reference page mirroring the tables above. Keep it
-in sync whenever a mapping changes here.
+Same 2-level pattern as the other modes: hold, release, then tap a letter
+within 1.5s to open a cheat sheet page in the browser. Pages live in
+`~/.config/cheatsheet/` (centralized there, not in this repo, so pages for
+other tools like tmux/aerospace can live alongside the Karabiner one).
+
+| Key | Page |
+|-----|------|
+| k | Karabiner (this repo's shortcuts) |
+| t | Tmux |
+| a | Aerospace |
+
+Keep `~/.config/cheatsheet/karabiner.html` in sync whenever a mapping
+changes here.
 
 ## Adding more
 
 Each mode is a rule in `complex_modifications.rules`, keyed by a
 `set_variable` flag (`app_launcher_mode`, `lighter_apps_mode`, `work_mode`,
-`personal_mode`) that's armed by the leader manipulator and read by each letter's
+`personal_mode`, `shortcuts_mode`) that's armed by the leader manipulator and read by each letter's
 `variable_if` condition. To add a letter to an existing mode, copy one of
 its manipulators, change the `key_code` and the `shell_command`. To add a
 new mode, copy a whole rule block with a new leader key and variable name.
